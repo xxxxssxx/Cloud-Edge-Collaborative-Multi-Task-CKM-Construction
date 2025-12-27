@@ -1,0 +1,19 @@
+conditioning:
+  method: ps
+  params:
+    scale: 10  # \zeta^{'} in dps paper
+
+measurement:
+  operator:
+    name: joint_degradation_recovery_ste
+    # The lower and upper bounds are for the pixel values in [0, 1]. In following clipping operation, they will be transformed to [-1, 1].
+    lower_bound: 0.2
+    upper_bound: 0.7
+
+    num_levels : 12  # 角度的量化等级数
+    eps : 1e-6
+  #  tau : 5.0  # turn on when using joint_degradation_recovery_soft
+
+  noise: 
+    name: gaussian
+    sigma: 0.02

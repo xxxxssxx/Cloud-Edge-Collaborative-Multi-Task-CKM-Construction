@@ -1,0 +1,13 @@
+measurement:
+  operator:
+    name: joint_degradation_recovery
+    # The lower and upper bounds are for the pixel values in [0, 1]. In following clipping operation, they will be transformed to [-1, 1].
+    lower_bound: 0.2
+    upper_bound: 0.7
+
+    num_levels : 12  # 角度的量化等级数（是论文中K的一半）
+    eps : 1e-6
+
+  noise: 
+    name: gaussian
+    sigma: 0.01

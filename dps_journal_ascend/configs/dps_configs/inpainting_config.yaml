@@ -1,0 +1,19 @@
+conditioning:
+  method: ps
+  params:
+    scale: 13  # \zeta^{'} in dps paper, \zeta in my paper
+
+measurement:
+  operator:
+    name: inpainting
+  mask_opt:
+    mask_type: ckm_box  # box, random, both, ckm_box, ckm_random
+    mask_len_range: !!python/tuple [5, 50]  # for box
+    mask_prob_range: !!python/tuple [0.001526, 0.1526]  # for random
+    margin: !!python/tuple [5, 5]
+    max_trials: 100
+
+
+  noise:
+    name: gaussian
+    sigma: 0.01
