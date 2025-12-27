@@ -6,6 +6,8 @@ This repository provides:
 - combine the foundation score-based model with **Plug-and-play diffusion posterior sampling (DPS)** for multi-task CKM construction under sparse / noisy / irregular observations using **VP** and **VE** SDE.
 - **End-to-end baselines** for supervised comparison, along with **MSE evaluation + visualization** scripts.
 
+All training experiments are conducted using 8 Ascend 910B NPUs.
+
 ---
 
 ## 1. Environment
